@@ -1,0 +1,27 @@
+main: io.github.mac_genius.npcmail.NPCMail
+name: NPCMail
+version: 1.0
+author: John Harrison
+depend: [SQLEconomy]
+permissions:
+  npcmail.*:
+    description: Allows a player to have all commands
+    children:
+      npcmail.help: true
+      npcmail.addmail: true
+      npcmail.editmenu: true
+  npcmail.help:
+    description: Allows a player to view help for the plugin
+    default: true
+  npcmail.addmail:
+    description: Allows a player to add mail
+    default: op
+  npcmail.editmenu:
+    description: Allows a player to edit the menu
+    default: op
+commands:
+  npcmail:
+    description: Main command for the plugin
+    usage: </command>
+    permission: npcmail.help
+    permission-message: You do not have access to that command.

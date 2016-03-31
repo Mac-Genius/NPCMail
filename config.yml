@@ -1,0 +1,32 @@
+# Stuff here
+
+############################################################
+# +------------------------------------------------------+ #
+# |                     MySQL Settings                   | #
+# +------------------------------------------------------+ #
+############################################################
+
+# This allows you to use mysql if you want multi-server support! Or just want easier storage.
+MySQL: true
+
+# Ip, database, user info, and password for MySQL.
+# Make sure you create the database before enabling!
+ip: localhost
+port: 3306
+database: minecraft
+user: root
+password: password
+
+############################################################
+# +------------------------------------------------------+ #
+# |                      NPC Position                    | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Default position for the NPC when the server starts up
+location:
+  x: -175.5
+  y: 115
+  z: -1228.5
+  yaw: -145.5
+  pitch: 0.0
