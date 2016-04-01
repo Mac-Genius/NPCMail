@@ -1,6 +1,5 @@
 package io.github.mac_genius.npcmail.utils;
 
-import io.github.mac_genius.npcmail.NPCMail;
 import io.github.mac_genius.npcmail.database.models.Mail;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

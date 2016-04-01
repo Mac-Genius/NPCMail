@@ -1,14 +1,15 @@
 package io.github.mac_genius.npcmail.tasks;
 
 import io.github.mac_genius.npcmail.NPCMail;
-import io.github.mac_genius.npcmail.npc.CustomPacket;
-import net.minecraft.server.v1_8_R3.*;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import net.minecraft.server.v1_9_R1.EntityPlayer;
+import net.minecraft.server.v1_9_R1.PacketPlayOutEntityHeadRotation;
+import net.minecraft.server.v1_9_R1.PacketPlayOutNamedEntitySpawn;
+import net.minecraft.server.v1_9_R1.PacketPlayOutPlayerInfo;
+import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by Mac on 3/27/2016.

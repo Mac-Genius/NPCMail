@@ -6,16 +6,14 @@ import com.mojang.authlib.GameProfile;
 import io.github.mac_genius.npcmail.NPCMail;
 import io.github.mac_genius.npcmail.utils.CustProfileCallback;
 import io.github.mac_genius.npcmail.utils.CustomPlayerConnection;
-import net.minecraft.server.v1_8_R3.*;
+import net.minecraft.server.v1_9_R1.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftArmorStand;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_9_R1.CraftServer;
+import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
-import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.lang.reflect.Field;
 import java.util.UUID;
@@ -25,12 +23,12 @@ import java.util.UUID;
  */
 public class MailMan {
     public static CraftPlayer createMan() {
-        MinecraftServer server = ((CraftServer) Bukkit.getServer()).getHandle().getServer();
+        MinecraftServer server = ((CraftServer)Bukkit.getServer()).getHandle().getServer();
         String[] args = {"Windows_Genius"};
         CustProfileCallback callback = new CustProfileCallback();
         server.getGameProfileRepository().findProfilesByNames(args, new Agent("minecraft", 1), callback);
         if (callback.didFetchWorked()) {
-            server.aD().fillProfileProperties(callback.getProfile(), true);
+            server.ay().fillProfileProperties(callback.getProfile(), true);
             for (Entity e : server.getWorld().entityList) {
                 if (e.getUniqueID().equals(UUID.nameUUIDFromBytes(("OfflinePlayerFake:Windows_Genius").getBytes(Charsets.UTF_8)))) {
                     if (e instanceof EntityPlayer) {

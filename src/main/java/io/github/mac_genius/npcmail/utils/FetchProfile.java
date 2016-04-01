@@ -2,9 +2,9 @@ package io.github.mac_genius.npcmail.utils;
 
 import com.mojang.authlib.Agent;
 import com.mojang.authlib.GameProfile;
-import net.minecraft.server.v1_8_R3.MinecraftServer;
+import net.minecraft.server.v1_9_R1.MinecraftServer;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_8_R3.CraftServer;
+import org.bukkit.craftbukkit.v1_9_R1.CraftServer;
 
 /**
  * Created by Mac on 3/28/2016.

@@ -1,5 +1,6 @@
 package io.github.mac_genius.npcmail;
 
+import com.redstonedgaming.sqleconomy.economy.Economy;
 import io.github.mac_genius.npcmail.commands.NPCMail_Command;
 import io.github.mac_genius.npcmail.database.SQLConnect;
 import io.github.mac_genius.npcmail.database.cache.ServerMail;
@@ -7,13 +8,8 @@ import io.github.mac_genius.npcmail.listeners.PlayerListeners;
 import io.github.mac_genius.npcmail.npc.MailMan;
 import io.github.mac_genius.npcmail.tasks.ShowPlayer;
 import io.github.mac_genius.npcmail.tasks.UpdateNPCName;
-import io.github.mac_genius.sqleconomy.economy.Economy;
-import net.minecraft.server.v1_8_R3.PacketPlayOutNamedEntitySpawn;
-import net.minecraft.server.v1_8_R3.PacketPlayOutPlayerInfo;
-import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
 import org.bukkit.entity.ArmorStand;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 

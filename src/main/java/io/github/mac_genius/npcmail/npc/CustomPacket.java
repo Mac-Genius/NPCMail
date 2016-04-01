@@ -1,9 +1,8 @@
 package io.github.mac_genius.npcmail.npc;
 
 import io.github.mac_genius.npcmail.utils.ReflectTools;
-import net.minecraft.server.v1_8_R3.PacketPlayInFlying;
-import net.minecraft.server.v1_8_R3.PacketPlayInSettings;
-import net.minecraft.server.v1_8_R3.PacketPlayOutEntityTeleport;
+import net.minecraft.server.v1_9_R1.PacketPlayInFlying;
+import net.minecraft.server.v1_9_R1.PacketPlayInSettings;
 
 /**
  * Created by Mac on 3/27/2016.

@@ -2,13 +2,11 @@ package io.github.mac_genius.npcmail.tasks;
 
 import io.github.mac_genius.npcmail.NPCMail;
 import io.github.mac_genius.npcmail.database.cache.PlayerMail;
-import io.github.mac_genius.npcmail.npc.CustomPacket;
-import io.github.mac_genius.npcmail.npc.MailMan;
-import net.minecraft.server.v1_8_R3.*;
+import net.minecraft.server.v1_9_R1.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftArmorStand;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_9_R1.entity.CraftArmorStand;
+import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
 
@@ -62,18 +60,19 @@ public class UpdateNPCName implements Runnable {
 
     private void updatePlayers(ArmorStand stand) {
         for (Player p : Bukkit.getOnlinePlayers()) {
-            DataWatcher watcher = new DataWatcher(((CraftArmorStand)stand).getHandle());
+            EntityArmorStand stand1 = ((CraftArmorStand)stand).getHandle();
+            DataWatcher watcher = new DataWatcher(stand1);
             PlayerMail mail = NPCMail.getSingleton().getMail().getPlayerMail(p);
             int amount = 0;
             if (mail != null) {
                 amount = mail.getAvailableMail();
             }
             if (amount == 0) {
-                watcher.a(2, "No new mail, " + p.getName());
+                watcher.register(new DataWatcherObject<>(2, DataWatcherRegistry.d), "No new mail, " + p.getName());
             } else if (amount == 1) {
-                watcher.a(2, current.replace("{player}", p.getName()).replace("{amount}", 1 + "").replace("{plural}", ""));
+                watcher.register(new DataWatcherObject<>(2, DataWatcherRegistry.d), current.replace("{player}", p.getName()).replace("{amount}", 1 + "").replace("{plural}", ""));
             } else {
-                watcher.a(2, current.replace("{player}", p.getName()).replace("{amount}", amount + "").replace("{plural}", "s"));
+                watcher.register(new DataWatcherObject<>(2, DataWatcherRegistry.d), current.replace("{player}", p.getName()).replace("{amount}", amount + "").replace("{plural}", "s"));
             }
             ((CraftPlayer)p).getHandle().playerConnection.sendPacket(new PacketPlayOutEntityMetadata(((CraftArmorStand)stand).getHandle().getId(), watcher, true));
         }
