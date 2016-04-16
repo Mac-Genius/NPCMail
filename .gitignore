@@ -47,9 +47,12 @@ Temporary Items
 .apdisk
 
 # Custom
-*.xml
-.idea
-*.class
+.idea/*.xml
+.idea/copyright
+.idea/artifacts/
+out
 *.iml
-*.jar
+target
+io
 *.swp
+*.ids
