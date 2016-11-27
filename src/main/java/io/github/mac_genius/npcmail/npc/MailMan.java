@@ -6,12 +6,12 @@ import com.mojang.authlib.GameProfile;
 import io.github.mac_genius.npcmail.NPCMail;
 import io.github.mac_genius.npcmail.utils.CustProfileCallback;
 import io.github.mac_genius.npcmail.utils.CustomPlayerConnection;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_9_R2.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_9_R1.CraftServer;
-import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_9_R2.CraftServer;
+import org.bukkit.craftbukkit.v1_9_R2.entity.CraftPlayer;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.EntityType;
 

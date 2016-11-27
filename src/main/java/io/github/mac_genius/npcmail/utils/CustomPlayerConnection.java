@@ -2,7 +2,7 @@ package io.github.mac_genius.npcmail.utils;
 
 import io.github.mac_genius.npcmail.NPCMail;
 import io.github.mac_genius.npcmail.npc.CustomPacket;
-import net.minecraft.server.v1_9_R1.*;
+import net.minecraft.server.v1_9_R2.*;
 
 /**
  * Created by Mac on 3/27/2016.

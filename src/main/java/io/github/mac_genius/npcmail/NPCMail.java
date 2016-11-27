@@ -8,7 +8,7 @@ import io.github.mac_genius.npcmail.listeners.PlayerListeners;
 import io.github.mac_genius.npcmail.npc.MailMan;
 import io.github.mac_genius.npcmail.tasks.ShowPlayer;
 import io.github.mac_genius.npcmail.tasks.UpdateNPCName;
-import org.bukkit.craftbukkit.v1_9_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_9_R2.entity.CraftPlayer;
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
